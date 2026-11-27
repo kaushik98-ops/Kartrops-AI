@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kartops-ai"
+version = "0.1.0"
+description = "KartOps AI - unified support / invoice / shipment operations assistant on LangGraph + AWS"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "langgraph>=1.0,<2",
+  "langgraph-checkpoint-aws>=1.0",
+  "boto3>=1.35",
+  "jsonschema>=4.20",
+  "python-dateutil>=2.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+kartops = "kartops.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+kartops = ["prompts/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["F", "I", "UP", "B"]

@@ -1,0 +1,9 @@
+.git
+.venv
+cdk.out
+infra
+tests
+evals
+docs
+**/__pycache__
+.kartops

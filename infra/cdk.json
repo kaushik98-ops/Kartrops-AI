@@ -1,0 +1,11 @@
+{
+  "app": "python3 app.py",
+  "context": {
+    "platform_name": "KartMart",
+    "model_fast": "",
+    "model_strong": "",
+    "kb_id": "",
+    "alert_email": "",
+    "retain_data": true
+  }
+}

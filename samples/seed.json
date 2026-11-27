@@ -1,0 +1,155 @@
+{
+ "customers": {
+  "C100": {
+   "tier": "regular",
+   "contact_count_30d": 0
+  },
+  "C200": {
+   "tier": "plus",
+   "contact_count_30d": 1
+  }
+ },
+ "orders": {
+  "OD1234567890": {
+   "order_id": "OD1234567890",
+   "customer_id": "C100",
+   "status": "shipped",
+   "tracking_status": "In transit - expected in 2 days",
+   "awb": "AWB12345678",
+   "items": [
+    "Bluetooth speaker"
+   ]
+  },
+  "OD2222222222": {
+   "order_id": "OD2222222222",
+   "customer_id": "C200",
+   "status": "delivered",
+   "tracking_status": "Delivered",
+   "awb": "AWB22222222",
+   "items": [
+    "Running shoes"
+   ]
+  }
+ },
+ "tracking": {
+  "AWB12345678": {
+   "status": "In transit",
+   "last_scan": "Hub - Kolkata"
+  }
+ },
+ "vendors": {
+  "VND-001": {
+   "vendor_id": "VND-001",
+   "name": "Acme Components Pvt Ltd",
+   "gstin": "29ABCDE1234F1Z5",
+   "bank_account": "123456789012",
+   "ifsc": "HDFC0001234",
+   "payment_terms_days": 30,
+   "emails": [
+    "billing@acme-components.in",
+    "ops@acme-components.in"
+   ],
+   "phones": [
+    "+91-80-5550-0001"
+   ]
+  },
+  "VND-002": {
+   "vendor_id": "VND-002",
+   "name": "Bright Textiles",
+   "gstin": "27ABCDE9999F1Z2",
+   "bank_account": "998877665544",
+   "ifsc": "ICIC0004321",
+   "payment_terms_days": 45,
+   "emails": [
+    "sales@brighttextiles.in"
+   ],
+   "phones": []
+  }
+ },
+ "pos": {
+  "PO-1001": {
+   "po_id": "PO-1001",
+   "vendor_id": "VND-001",
+   "status": "open",
+   "created": "2026-11-01",
+   "promised_ship": "2026-11-25",
+   "need_by": "2026-12-05",
+   "criticality": "critical",
+   "buffer_days": 3,
+   "transit_days": 2,
+   "lines": [
+    {
+     "sku": "SKU-AAA",
+     "qty": 100,
+     "unit_price": 250
+    }
+   ]
+  },
+  "PO-1002": {
+   "po_id": "PO-1002",
+   "vendor_id": "VND-002",
+   "status": "open",
+   "created": "2026-11-05",
+   "promised_ship": "2026-12-01",
+   "need_by": "2026-12-20",
+   "criticality": "normal",
+   "buffer_days": 5,
+   "transit_days": 3,
+   "lines": [
+    {
+     "sku": "SKU-BBB",
+     "qty": 500,
+     "unit_price": 120
+    }
+   ]
+  }
+ },
+ "grn": {
+  "PO-1001": {
+   "po_id": "PO-1001",
+   "lines": [
+    {
+     "sku": "SKU-AAA",
+     "qty_received": 100
+    }
+   ]
+  }
+ },
+ "payments": {
+  "VND-001": [
+   {
+    "invoice_no": "INV-0900",
+    "total": 25000,
+    "invoice_date": "2026-10-01",
+    "status": "paid"
+   }
+  ]
+ },
+ "scorecards": {
+  "VND-001": {
+   "on_time_pct": 92
+  },
+  "VND-002": {
+   "on_time_pct": 88
+  }
+ },
+ "inventory": {
+  "SKU-AAA": {
+   "sku": "SKU-AAA",
+   "on_hand": 300,
+   "daily_sales": 30
+  },
+  "SKU-BBB": {
+   "sku": "SKU-BBB",
+   "on_hand": 4000,
+   "daily_sales": 40
+  }
+ },
+ "sale_calendar": [
+  {
+   "name": "Year-End Sale",
+   "start": "2026-12-10",
+   "end": "2026-12-15"
+  }
+ ]
+}
